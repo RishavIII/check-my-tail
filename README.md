@@ -24,7 +24,7 @@ Vet visits are expensive ($250+ per visit) and many pet owners delay care due to
 ---
 
 ### **🖥️ How to Test the App**
-**🔗 Live Demo:** [Your App Link]  
+**🔗 Live Demo:** www.checkmytail.co
 
 ✅ Upload a pet image & enter symptoms  
 ✅ Click **Analyze Health**  
@@ -60,8 +60,9 @@ Vet visits are expensive ($250+ per visit) and many pet owners delay care due to
 ---
 
 ### **👥 Team Members**
-🐶 [Your Name] - AI & Backend  
-🐱 [Teammate 2] - Bubble & UI/UX  
-🐾 [Teammate 3] - Business & Market Strategy  
+🐰 Rui Sun - PM & Business Strategy 
+🐶 Mason Wu - AI & Backend  
+🐱 Libby Zou - Bubble & UI/UX  
+🐾 Rishav - PM & Business Strategy  
 
 🚀 **Created at Duke HackforGood 2025 - Let’s revolutionize pet healthcare!** 🏆  
