@@ -1,1 +1,118 @@
+# 📂 Backend Documentation
+
+This folder contains the documentation and assets related to the **backend setup and workflows** of the CheckMyTail project. The backend leverages **Zapier**, **Airtable**, and **OpenAI APIs** to handle automation, data processing, and health report generation.
+
+---
+
+## **📄 Overview**
+
+The backend is built using low-code tools and APIs to:
+- Automate workflow logic between Bubble, Airtable, and OpenAI.
+- Process user inputs and generate personalized health reports.
+- Ensure data storage and retrieval are efficient.
+
+---
+
+## **🛠️ Zapier Workflow Steps**
+The Zapier workflow manages data between Bubble, Airtable, and OpenAI.
+
+### **Workflow Description**
+1. **Trigger:** Event received from Bubble when a user submits an image and symptom details.
+2. **Step 1: Airtable - Create Record**
+   - Creates a new record in Airtable to log the user's submission.
+   - Fields include:
+     - Pet Name
+     - Age
+     - Symptoms
+     - Uploaded Image URL
+3. **Step 2: Airtable - Find Record**
+   - Checks if the user has previous submissions.
+   - Retrieves related historical records for context.
+4. **Step 3: Airtable - Find Record** (Repeated)
+   - Validates if the pet's health data aligns with existing conditions.
+5. **Step 4: Airtable - Create Record**
+   - Saves the AI-generated analysis and recommendations in Airtable.
+6. **Step 5: OpenAI API Integration**
+   - Sends the pet's symptoms and image details to OpenAI for health insights.
+   - Receives a structured report with:
+     - Health Score
+     - Observations
+     - Recommendations
+7. **Step 6: Final Report Handling**
+   - Sends a confirmation email to the user with the detailed report attached.
+
+---
+
+## **🔑 API Configuration**
+
+### **OpenAI API**
+- **Purpose:** Generates the health report based on pet symptoms and uploaded images.
+- **Endpoint:** `https://api.openai.com/v1/completions`
+- **Parameters:**
+  - `prompt`: Tailored prompts for pet health analysis.
+  - `temperature`: 0.7
+  - `max_tokens`: 1000
+  - `api_key`: Stored securely in Zapier.
+
+### **Airtable API**
+- **Purpose:** Stores and retrieves user submissions and health reports.
+- **Setup:**
+  - Base: `CheckMyTail_Logs`
+  - Tables:
+    - `User Submissions`
+    - `Health Reports`
+
+---
+
+## **📝 Backend File Content**
+
+### **Zapier Workflow Export**
+Exported as `.zap` files for import to replicate automation workflows.
+
+### **Scripts for OpenAI API (Optional)**
+For advanced customization, Python or Node.js scripts can replace Zapier for handling API calls:
+
+```python
+import requests
+
+# OpenAI API Setup
+def generate_health_report(prompt):
+    url = "https://api.openai.com/v1/completions"
+    headers = {
+        "Authorization": f"Bearer YOUR_API_KEY",
+        "Content-Type": "application/json",
+    }
+    data = {
+        "model": "text-davinci-003",
+        "prompt": prompt,
+        "max_tokens": 1000,
+        "temperature": 0.7,
+    }
+
+    response = requests.post(url, headers=headers, json=data)
+    return response.json()
+
+# Example Usage
+prompt = "Generate a pet health report for symptoms: coughing and sneezing."
+result = generate_health_report(prompt)
+print(result)
+```
+
+---
+
+## **📷 Screenshots**
+
+### **Zapier Workflow**
+![Zapier Workflow Screenshot](../assets/zapier_workflow_screenshot.png)
+
+---
+
+## **Future Enhancements**
+- **Replace Zapier:** Migrate to a custom backend for more control and scalability.
+- **Real-Time Processing:** Use WebSocket-based communication for instant updates.
+- **Enhanced AI Integration:** Add image recognition models for more precise diagnostics.
+
+---
+
+For further details, refer to the main [README.md](../README.md).
 
