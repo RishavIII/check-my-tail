@@ -62,7 +62,7 @@ Vet visits are expensive ($250+ per visit) and many pet owners delay care due to
 ### **👥 Team Members**
 🐱 Libby Zou - Bubble & UI/UX  
 🐶 Mason Wu - AI & Backend  
-🐰 Rui Sun - PM & Business Strategy 
-🐾 Rishav - PM & Business Strategy  
+🐾 Rishav - AI & Backend
+🐰 Rui Sun - PM & Strategy 
 
 🚀 **Created at Duke HackforGood 2025 - Let’s revolutionize pet healthcare!** 🏆  
