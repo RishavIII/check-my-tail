@@ -1,0 +1,98 @@
+# 📂 Frontend Documentation
+
+This folder contains the documentation and assets related to the **frontend development** of the CheckMyTail project, implemented using **Bubble.io**. The frontend handles user interactions, uploads, and UI workflows to deliver a seamless pet health analysis experience.
+
+---
+
+## **📄 Overview**
+
+The frontend is built entirely on **Bubble.io**, a no-code platform. It includes:
+
+- User-friendly interfaces for pet owners.
+- API integrations for image analysis and health report generation.
+- Visual elements optimized for responsiveness across devices.
+
+---
+
+## **🛠️ Workflows**
+
+### **1️⃣ Sign Up / Log In Workflow**
+Allows users to create an account or log in to access the platform.
+
+#### Steps:
+1. User clicks "Sign Up" or "Log In" on the landing page.
+2. For new users:
+   - Enter email, password, and confirm.
+   - Bubble validates the input and creates an account.
+3. Returning users:
+   - Enter email and password.
+   - Bubble authenticates the user and redirects to the dashboard.
+
+---
+
+### **2️⃣ Pet Information Setup Workflow**
+Collects essential details about the pet to personalize the analysis.
+
+#### Steps:
+1. User is prompted to enter pet information:
+   - Pet name, breed, age, and other relevant details.
+2. Bubble stores this data securely in the database.
+3. The information is used to tailor the health report.
+
+---
+
+### **3️⃣ Health Concern Input and Analysis Workflow**
+Allows users to describe their pet's health concerns and submit for analysis.
+
+#### Steps:
+1. User selects or drags an image into the upload box.
+2. User describes the health concern (e.g., symptoms, behavior changes).
+3. Bubble validates the image and text input.
+4. The details are sent to Zapier via API workflows for further processing.
+5. User clicks "Submit" to initiate the analysis.
+
+---
+
+### **4️⃣ Email Integration Workflow**
+Automatically sends a detailed health report to the user's email.
+
+#### Steps:
+1. Once the health report is generated, Bubble triggers a Zapier webhook.
+2. The webhook sends:
+   - Report details (summary, observations, recommendations).
+   - Attached image analyzed.
+3. The user receives a formatted email with all the information.
+
+---
+
+## **🎨 Visual Design**
+
+### **Pages**
+- **Landing Page:** Highlights the product and invites users to sign up.
+- **Pet Setup Page:** Collects pet information for personalized insights.
+- **Upload Page:** Allows users to upload an image and describe symptoms.
+- **Results Page:** Displays health insights and care recommendations.
+- **About Page:** Shares information about CheckMyTail’s mission and team.
+
+### **Responsive Design**
+- Designed for compatibility with mobile, tablet, and desktop devices.
+- Uses Bubble’s built-in responsive engine to ensure UI adjusts dynamically.
+
+---
+
+## **📷 Screenshots**
+### **Landing Page**
+![Landing Page Screenshot](../assets/landing_page_screenshot.png)
+
+### **Upload Workflow**
+![Upload Workflow Screenshot](../assets/upload_workflow_screenshot.png)
+
+### **Results Page**
+![Results Page Screenshot](../assets/results_page_screenshot.png)
+
+---
+
+## **🔗 Live Demo**
+Access the live application here: [CheckMyTail](https://www.checkmytail.co)
+
+For further questions, feel free to reach out or refer to the main [README.md](../README.md) file.
